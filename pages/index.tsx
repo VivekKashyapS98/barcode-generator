@@ -12,7 +12,6 @@ const Home: NextPage = () => {
     includeText: true,
     textXAlign: "center",
   });
-  const [code, setCode] = useState<HTMLCanvasElement | null>(null);
 
   const generateCode = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -25,7 +24,6 @@ const Home: NextPage = () => {
       includetext: data?.includeText,
       textxalign: data?.textXAlign,
     });
-    setCode(canvas);
   };
 
   const handleChange = (
@@ -151,6 +149,17 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="text-center">
+        <a
+          href="https://github.com/VivekKashyapS98/barcode-generator"
+          className="btn btn-outline btn-primary"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Get the code
+        </a>
       </div>
     </div>
   );

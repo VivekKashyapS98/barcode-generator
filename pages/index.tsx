@@ -7,7 +7,7 @@ const Home: NextPage = () => {
   const [data, setData] = useState<BwitData>({
     bcid: "code128",
     text: "Text",
-    scale: 3,
+    scale: 2,
     height: 10,
     includeText: true,
     textXAlign: "center",

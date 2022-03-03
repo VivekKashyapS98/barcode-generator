@@ -51,13 +51,16 @@ const Home: NextPage = () => {
         BarCode Generator
       </h1>
       <div className="min-h-full bg-base-200 flex flex-wrap justify-around items-center">
-        <form className="flex flex-col" onSubmit={generateCode}>
-          <div className="form-control w-full max-w-xs m-1">
+        <form
+          className="flex flex-col md:min-w-[400px]"
+          onSubmit={generateCode}
+        >
+          <div className="form-control w-full max-w-full m-1">
             <label className="label">
               <span className="label-text">Barcode Type</span>
             </label>
             <select
-              className="select w-full max-w-xs"
+              className="select w-full max-w-full"
               onChange={handleChange}
               name="bcid"
               value={data.bcid}
@@ -69,12 +72,12 @@ const Home: NextPage = () => {
             </select>
           </div>
 
-          <div className="form-control w-full max-w-md m-1">
+          <div className="form-control w-full max-w-full m-1">
             <label className="label">
               <span className="label-text">Text to encode</span>
             </label>
             <input
-              className="input w-full max-w-xs"
+              className="input w-full max-w-full"
               required
               type="text"
               name="text"
@@ -83,12 +86,12 @@ const Home: NextPage = () => {
             />
           </div>
 
-          <div className="form-control w-full max-w-md m-1">
+          <div className="form-control w-full max-w-full m-1">
             <label className="label">
               <span className="label-text">Scaling factor</span>
             </label>
             <input
-              className="input w-full max-w-xs"
+              className="input w-full max-w-full"
               type="number"
               name="scale"
               value={data?.scale}
@@ -96,12 +99,12 @@ const Home: NextPage = () => {
             />
           </div>
 
-          <div className="form-control w-full max-w-md m-1">
+          <div className="form-control w-full max-w-full m-1">
             <label className="label">
               <span className="label-text">Bar height</span>
             </label>
             <input
-              className="input w-full max-w-xs"
+              className="input w-full max-w-full"
               type="number"
               name="height"
               value={data?.height}
@@ -109,12 +112,12 @@ const Home: NextPage = () => {
             />
           </div>
 
-          <div className="form-control w-full max-w-md m-1">
+          <div className="form-control w-full max-w-full m-1">
             <label className="label">
               <span className="label-text">Text Position</span>
             </label>
             <select
-              className="select w-full max-w-xs"
+              className="select w-full max-w-full"
               onChange={handleChange}
               name="textXAlign"
               value={data.textXAlign}
@@ -125,7 +128,7 @@ const Home: NextPage = () => {
             </select>
           </div>
 
-          <div className="form-control w-full max-w-md m-1">
+          <div className="form-control w-full max-w-full m-1">
             <label className="label cursor-pointer">
               <span className="label-text">Show human-readable text</span>
               <input
